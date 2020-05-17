@@ -8,6 +8,6 @@ spec:
   - name: revision
     value: ""
   - name: url
-    value: https://jstrachan:bb21afdcbf9abb3cee9bec2b53bb218669c57b14@github.com/jstrachan/nodey442.git
+    value: https://@github.com/jstrachan/nodey442.git
   type: git
 status: {}
