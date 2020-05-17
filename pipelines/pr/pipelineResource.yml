@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  creationTimestamp: null
+  name: jstrachan-nodey442-master-ff45w
+spec:
+  params:
+  - name: revision
+    value: ""
+  - name: url
+    value: https://jstrachan:bb21afdcbf9abb3cee9bec2b53bb218669c57b14@github.com/jstrachan/nodey442.git
+  type: git
+status: {}

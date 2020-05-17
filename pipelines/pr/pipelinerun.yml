@@ -1,0 +1,29 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  creationTimestamp: null
+  labels:
+    branch: master
+    build: "1"
+    jenkins.io/pipelineType: build
+    owner: jstrachan
+    repository: nodey442
+  name: jstrachan-nodey442-master-ff45w-1
+spec:
+  params:
+  - name: version
+    value: 0.0.0-SNAPSHOT-master-1
+  - name: build_id
+    value: "1"
+  pipelineRef:
+    apiVersion: tekton.dev/v1alpha1
+    name: jstrachan-nodey442-master-ff45w-1
+  podTemplate: {}
+  resources:
+  - name: jstrachan-nodey442-master-ff45w
+    resourceRef:
+      apiVersion: tekton.dev/v1alpha1
+      name: jstrachan-nodey442-master-ff45w
+  serviceAccountName: tekton-bot
+  timeout: 240h0m0s
+status: {}

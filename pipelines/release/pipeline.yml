@@ -1,0 +1,40 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  creationTimestamp: null
+  labels:
+    branch: master
+    build: "1"
+    jenkins.io/pipelineType: build
+    owner: jstrachan
+    repository: nodey442
+  name: jstrachan-nodey442-master-qrnkl-1
+  namespace: jx
+spec:
+  params:
+  - default: 1.0.1
+    description: the version number for this pipeline which is used as a tag on docker
+      images and helm charts
+    name: version
+    type: string
+  - default: "1"
+    description: the PipelineRun build number
+    name: build_id
+    type: string
+  resources:
+  - name: jstrachan-nodey442-master-qrnkl
+    type: git
+  tasks:
+  - name: from-build-pack
+    params:
+    - name: version
+      value: $(params.version)
+    - name: build_id
+      value: $(params.build_id)
+    resources:
+      inputs:
+      - name: workspace
+        resource: jstrachan-nodey442-master-qrnkl
+    taskRef:
+      name: jstrachan-nodey442-master-qrnkl-from-build-pack-1
+status: {}
