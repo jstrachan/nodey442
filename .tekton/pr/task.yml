@@ -9,7 +9,7 @@ metadata:
     jenkins.io/task-stage-name: from-build-pack
     owner: jstrachan
     repository: nodey442
-  name: jstrachan-nodey442-master-ff45w-from-build-pack-1
+  name: node-pr
   namespace: jx
 spec:
   inputs:

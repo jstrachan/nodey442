@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
   creationTimestamp: null
-  name: jstrachan-nodey442-master-ff45w
+  name: node-pr
 spec:
   params:
   - name: revision

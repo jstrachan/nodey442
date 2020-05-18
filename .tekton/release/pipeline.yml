@@ -8,7 +8,7 @@ metadata:
     jenkins.io/pipelineType: build
     owner: jstrachan
     repository: nodey442
-  name: jstrachan-nodey442-master-qrnkl-1
+  name: node-release
   namespace: jx
 spec:
   params:
@@ -22,7 +22,7 @@ spec:
     name: build_id
     type: string
   resources:
-  - name: jstrachan-nodey442-master-qrnkl
+  - name: node-release
     type: git
   tasks:
   - name: from-build-pack
@@ -34,7 +34,7 @@ spec:
     resources:
       inputs:
       - name: workspace
-        resource: jstrachan-nodey442-master-qrnkl
+        resource: node-release
     taskRef:
-      name: jstrachan-nodey442-master-qrnkl-from-build-pack-1
+      name: node-release
 status: {}

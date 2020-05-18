@@ -2,12 +2,12 @@ dapiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
   creationTimestamp: null
-  name: jstrachan-nodey442-master-qrnkl
+  name: node-release
 spec:
   params:
   - name: revision
-    value: v1.0.1
+    value: master
+    #value: v1.0.1
   - name: url
     value: https://@github.com/jstrachan/nodey442.git
   type: git
-status: {}

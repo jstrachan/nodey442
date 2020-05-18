@@ -8,7 +8,7 @@ metadata:
     jenkins.io/pipelineType: build
     owner: jstrachan
     repository: nodey442
-  name: jstrachan-nodey442-master-qrnkl-1
+  name: node-release
 spec:
   params:
   - name: version
@@ -17,13 +17,13 @@ spec:
     value: "1"
   pipelineRef:
     apiVersion: tekton.dev/v1alpha1
-    name: jstrachan-nodey442-master-qrnkl-1
+    name: node-release
   podTemplate: {}
   resources:
-  - name: jstrachan-nodey442-master-qrnkl
+  - name: node-release
     resourceRef:
       apiVersion: tekton.dev/v1alpha1
-      name: jstrachan-nodey442-master-qrnkl
+      name: node-release
   serviceAccountName: tekton-bot
   timeout: 240h0m0s
 status: {}

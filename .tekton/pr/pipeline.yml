@@ -8,7 +8,7 @@ metadata:
     jenkins.io/pipelineType: build
     owner: jstrachan
     repository: nodey442
-  name: jstrachan-nodey442-master-ff45w-1
+  name: node-pr
   namespace: jx
 spec:
   params:
@@ -22,7 +22,7 @@ spec:
     name: build_id
     type: string
   resources:
-  - name: jstrachan-nodey442-master-ff45w
+  - name: node-pr
     type: git
   tasks:
   - name: from-build-pack
@@ -34,7 +34,7 @@ spec:
     resources:
       inputs:
       - name: workspace
-        resource: jstrachan-nodey442-master-ff45w
+        resource: node-pr
     taskRef:
-      name: jstrachan-nodey442-master-ff45w-from-build-pack-1
+      name: node-pr
 status: {}
